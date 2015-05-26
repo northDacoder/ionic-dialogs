@@ -1,18 +1,20 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
     <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
+      <div class="item item-divider">Cordova Dialogs</div>
       <div class="item item-body">
         <div>
-          There is a fire in <b>sector 3</b>
+            <button ng-click="iosAlert()" class="button button-balanced button-block"><i class="icon ion-social-apple"></i> iOS Alert</button>
         </div>
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">Health</div>
+      <div class="item item-divider">Cordova Dialogs</div>
       <div class="item item-body">
         <div>
-          You ate an apple today!
+            <button ng-click="iosConfirm()" class="button button-danger button-block"><i class="icon ion-social-apple"></i> iOS Confirm</button>
+
+            <!-- <buttno ng-click="toastPopup()" class="button button-positive button-block"><i class="icon"></i> Toast Popup</button> -->
         </div>
       </div>
     </div>

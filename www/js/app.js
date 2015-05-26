@@ -14,6 +14,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
+
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
@@ -21,6 +22,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     if (navigator.notification) {
         console.log(navigator.notification);
+        function alertDismissed() {
+
+        };
+
+        function iosAlert() {
+            navigator.notification.alert(
+                'You are the winner!',  // message
+                alertDismissed,         // callback
+                'Game Over',            // title
+                'Done'                  // buttonName
+            );
+        };
     }
   });
 })

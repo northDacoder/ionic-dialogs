@@ -1,9 +1,18 @@
-<ion-view view-title="Account">
+<ion-view view-title="Toast">
   <ion-content>
-    <ion-list>
+    <!-- <ion-list>
     <ion-toggle  ng-model="settings.enableFriends">
         Enable Friends
     </ion-toggle>
-    </ion-list>
+    </ion-list> -->
+    <div>
+        <button class="button button-positive button-block" onclick="window.plugins.toast.showShortTop('Hello there!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">Toast Short-top</button>
+    </div>
+    <div>
+        <button class="button button-balanced button-block" onclick="window.plugins.toast.showLongBottom('Hello there!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">Toast Long-bottom</button>
+    </div>
+    <div>
+        <button class="button button-danger button-block" onclick="window.plugins.toast.show('Hello there!', 'long', 'center', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">Toast Long-center</button>
+    </div>
   </ion-content>
 </ion-view>
