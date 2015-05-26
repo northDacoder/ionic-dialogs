@@ -18,6 +18,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
     }
+
+    if (navigator.notification) {
+        console.log(navigator.notification);
+    }
   });
 })
 
